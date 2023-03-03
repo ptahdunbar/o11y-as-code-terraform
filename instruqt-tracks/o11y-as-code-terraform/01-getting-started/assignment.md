@@ -1,6 +1,6 @@
 ---
 slug: getting-started
-id: b1gr8jlxxvmu
+id: poxe8s7bwoob
 type: challenge
 title: Getting Started with Terraform
 teaser: Getting Started with Terraform
