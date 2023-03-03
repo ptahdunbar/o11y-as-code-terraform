@@ -1,0 +1,8 @@
+node_modules/
+newrelic_agent.log
+.env
+Pulumi.local.yaml
+*.tfstate*
+*.terraform*
+.DS_Store
+tmp

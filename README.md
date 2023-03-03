@@ -1,14 +1,57 @@
-## Instruqt Skeleton
+[![New Relic Experimental header](https://github.com/newrelic/opensource-website/raw/master/src/images/categories/Experimental.png)](https://opensource.newrelic.com/oss-category/#new-relic-experimental)
 
-This repository contains a set of GitHub Actions workflows to manage the development of your Instruqt tracks. 
+# Workshop: Observability as Code with Terraform
 
-[Click here for the full documentation on building tracks with this developer workflow.](https://docs.instruqt.com/how-to-guides/build-tracks/maintain-a-developer-workflow#developer-workflow)
+This app demonstrates how to incorporate Terraform and New Relic together using Observability as Code.
 
-## Developer Workflow
-From the repository that contains your Instruqt tracks:
-1. Create a new branch by selecting **Main > View all branches > New branch.**
-2. Select **Actions** from the top menu of your repository. On the left side, select the `convert` workflow. On the right side, expand the **Run workflow** dropdown menu, and select your new branch name. Next, provide the slug of the track you intend to modify. Finally, select **Run workflow**.
-3. Go to your organization's [Instruqt page](https://play.instruqt.com/) and modify the development version of your track until you are satisfied with the changes.
-4. Once the development version of your track is ready, return to GitHub and run the `promote` workflow from the **Actions** menu. Provide the same branch and track slug you used in the `convert` workflow.
-5. Create a pull request by selecting **Pull requests** in the top menu of your repository, followed by **New pull request**. Indicate your new branch, and select **Create pull request**. 
-6. Have a colleague review your work, and merge the pull request! Once merged, the changes will be applied to the production version of your track.
+## Set up Terraform and manage your secrets
+
+### Setup accounts
+- [Terraform](https://developer.hashicorp.com/terraform/tutorials/aws-get-started/install-cli)
+- [New Relic](https://newrelic.com/signup)
+
+#### Confirm terraform is installed
+```
+which terraform
+```
+
+#### Install Terraform
+```
+brew tap hashicorp/tap
+brew install hashicorp/tap/terraform
+```
+
+#### Get Credentials
+- https://one.newrelic.com/launcher/api-keys-ui.api-keys-launcher
+
+#### Clone the repo and run the app
+```
+git clone
+docker compose up
+```
+
+#### Configure your secrets
+```
+cd o11y
+vim variables.tf
+```
+
+```
+export TF_VAR_NEW_RELIC_ACCOUNT_ID=1234567
+export TF_VAR_NEW_RELIC_API_KEY=AABBCC
+export TF_VAR_NEW_RELIC_REGION=US
+export TF_VAR_APPS='["web-api", "login-service"]'
+export TF_VAR_ALERT_NOTIFICATION_EMAIL=acme@example.com
+export TF_VAR_SYNTHETIC_MONITOR_URL=http://example.com
+```
+
+### Run Terraform
+```
+cd o11y
+terraform apply
+terraform down
+```
+
+## LICENSE
+
+This is licensed with the Apache 2.0 [license](LICENSE).
