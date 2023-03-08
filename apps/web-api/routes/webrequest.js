@@ -3,6 +3,10 @@ const http = require('http');
 const newrelic = require('newrelic');
 const logger = require('../logger')
 
+function random(min, max) {
+  return Math.floor(Math.random() * (max - min + 1) + min)
+}
+
 const webrequest = (app, fs) => {
   // READ
   app.get('/webrequest', (req, res) => {
@@ -39,7 +43,7 @@ const webrequest = (app, fs) => {
     logger.info(`URL: ${SECONDHOP_URL}/confirmation`)
 
     await new Promise((resolve) => {
-        setTimeout(resolve, random(500, 3000))
+      setTimeout(resolve, random(500, 3000))
     })
 
     // Deliberately return a server error.
@@ -65,10 +69,10 @@ const webrequest = (app, fs) => {
         logger.error(err);
       });
     } else {
-        const error = new Error('Order confirmation failed. Please try again.')
-        logger.error(error);
-        newrelic.noticeError(error)
-        res.status(500).send(error);
+      const error = new Error('Order confirmation failed. Please try again.')
+      logger.error(error);
+      newrelic.noticeError(error)
+      res.status(500).send(error);
     }
   });
 };
