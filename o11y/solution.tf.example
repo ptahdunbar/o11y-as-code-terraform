@@ -51,7 +51,7 @@ output "o11y_apps" {
   value = data.newrelic_entity.APPS[*].guid
 }
 
-# Tag each app with the team and environment values
+# TODO: Tag each app with the team and environment values
 resource "newrelic_entity_tags" "APPS" {
   count = length(var.APPS)
   guid  = data.newrelic_entity.APPS[count.index].guid
