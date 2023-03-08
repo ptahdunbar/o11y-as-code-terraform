@@ -1,6 +1,10 @@
 ---
 slug: lab-synthetic-checks
+<<<<<<< HEAD
 id: woxwqjpyw82x
+=======
+id: vdmjynj3lllm
+>>>>>>> 5d125f2ba706f84fa6d23db30aaeb8dcca3e017e
 type: challenge
 title: 'Lab: Synthetic Checks'
 teaser: Creating Synthetic Monitors
