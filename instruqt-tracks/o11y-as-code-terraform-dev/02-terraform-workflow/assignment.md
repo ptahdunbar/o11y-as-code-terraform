@@ -36,10 +36,10 @@ timelimit: 600
 
 - Update `ALERT_NOTIFICATION_EMAIL` to point to your email address.
 
-- Once complete, run the following command:
+- Switch to the Terminal tab, change to the `o11y` directory and run the following command:
 
 ```
-make source
+. .env
 ```
 
 🧪 Step 2: terraform init
@@ -55,13 +55,15 @@ terraform init
 =======================
 
 - In the Editor tab, open `o11y/main.tf`
-- Add this after `# TODO: Output the names of the apps we are going to monitor`
+- In `o11y/main.tf` add this code snippet after `# TODO: Output the names of the apps we are going to monitor`
 
 ```
 output "o11y-as-code-apps" {
   value = toset(var.APPS)
 }
 ```
+
+- Remember to save the file.
 
 - Using the Terminal tab, change directory to `o11y` then validate the changes by running the following command:
 

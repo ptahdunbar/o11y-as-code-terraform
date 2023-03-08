@@ -33,8 +33,8 @@ timelimit: 600
 2. Copy the pre-built dashboard as a json file.
 3. Save the file as `o11y/dashboard/import.json`
 
-- Create a dashboard resource for the imported dashboard.
-- Add this code snippet after `# TODO: Import a dashboard from a JSON file`
+- After those steps, create a dashboard resource for the imported dashboard.
+- In `o11y/main.tf` add this code snippet after `# TODO: Import a dashboard from a JSON file`
 
 ```
 resource "newrelic_one_dashboard_json" "imported-dashboard" {
@@ -43,7 +43,7 @@ resource "newrelic_one_dashboard_json" "imported-dashboard" {
 ```
 
 - Create a link to your imported dashboard
-- Add this code snippet after `# TODO: Output the permalink to the imported dashboard`
+- In `o11y/main.tf` add this code snippet after `# TODO: Output the permalink to the imported dashboard`
 
 ```
 output "my-team-imported-dashboard" {
@@ -51,22 +51,70 @@ output "my-team-imported-dashboard" {
 }
 ```
 
-- Preview your changes:
+- Remember to save the file.
+
+- Using the Terminal tab, preview the changes using the following command:
 
 ```
 terraform plan
 ```
 
-- When your ready, apply your changes:
+- Once you're satisfied with the changes, run the following command to apply the changes.
 
 ```
 terraform apply
 ```
 
-🧪 Step 2: Setup applications
+🧪 Step 2: Create a dynamic Dashboard
 =======================
 
+- Using the Editor tab, review `o11y/dashboards/custom.json.tftpl`
+- Notice the variables used `${variable_name}`
+- Variables can be passed into the template.
+
+- Create a custom dashboard resource using variables.
+- Add this code snippet after `# TODO: Create a dashboard from a template file`
+
+```
+resource "newrelic_one_dashboard_json" "custom-dashboard" {
+  json = templatefile("dashboards/custom.json.tftpl", {
+    account_id = var.NEW_RELIC_ACCOUNT_ID,
+    applications = var.APPS,
+    dashboard_name: "O11yAsCode Dashboard (TF)",
+  })
+}
+```
+
+- Create a link to your custom dashboard
+- In `o11y/main.tf` add this code snippet after `# TODO: Output the permalink to the custom dashboard`
+
+```
+output "my-team-custom-dashboard" {
+  value = newrelic_one_dashboard_json.custom-dashboard.permalink
+}
+```
+
+- Remember to save the file.
 
 🏁 Step 3: Finish
 =======================
+
+- Using the Terminal tab, source your environment variables by navigating to the `o11y` directory and running the following command:
+
+```
+. .env
+```
+
+- Using the Terminal tab, navigate to `o11y` directory and run the following command to preview your changes:
+
+```
+terraform plan
+```
+
+- Once you're satisfied with the changes, run the following command to apply the changes.
+
+```
+terraform apply
+```
+
 To complete the challenge, press **Check**

@@ -36,8 +36,18 @@ variable "MY_TEAM_WORKLOAD_NAME" {
   default = "O11yAsCode Sao Paolo (TF)"
 }
 
+variable "MY_TEAM_WORKLOAD_QUERY" {
+  default = "tags.Team='FutureStackSaoPaulo'"
+}
+
 # List of URLs to run checks against.
 variable "SYNTHETIC_CHECK_SSL" {
+  description = "URLS to check for synthetic checks"
+  type        = list(string)
+  default = ["https://example.com", "https://amce.com"]
+}
+
+variable "SYNTHETIC_CHECK_LINKS" {
   description = "URLS to check for synthetic checks"
   type        = list(string)
   default = ["https://example.com", "https://amce.com"]
