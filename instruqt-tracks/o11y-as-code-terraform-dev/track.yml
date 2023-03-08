@@ -1,0 +1,15 @@
+slug: o11y-as-code-terraform-dev
+id: wla3qkiqx6tl
+title: DEV - O11y as Code Terraform Edition
+teaser: This app demonstrates how to incorporate Terraform and New Relic together
+  using Observability as Code.
+description: O11y as Code Terraform Edition
+icon: https://cdn.instruqt.com/assets/templates/docker.png
+tags:
+- dev
+owner: newrelic
+developers:
+- pdunbar@newrelic.com
+maintenance: true
+checksum: "11499517610766223684"
+timelimit: 4800

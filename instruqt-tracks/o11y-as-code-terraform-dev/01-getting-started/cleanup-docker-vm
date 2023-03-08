@@ -1,0 +1,4 @@
+#!/bin/bash
+set -euxo pipefail
+
+# echo "$INSTRUQT_USER_NAME running challenge cleanup script on $INSTRUQT_CHALLENGE_ID"
