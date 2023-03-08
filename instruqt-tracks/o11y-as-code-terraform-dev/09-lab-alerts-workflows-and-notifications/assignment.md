@@ -1,6 +1,6 @@
 ---
 slug: lab-alerts-workflows-and-notifications
-id: jfgskkq5jpun
+id: rfmp7mzhlfji
 type: challenge
 title: 'Lab: Alerts, Workflows and Notifications'
 teaser: Setup alerts and notifications before issues become a larger issue.

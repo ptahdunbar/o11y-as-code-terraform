@@ -1,6 +1,6 @@
 ---
 slug: terraform-workflow
-id: ry6uamse1xjk
+id: z9uecbmrl8ay
 type: challenge
 title: Terraform workflow
 teaser: Review terraform commands
