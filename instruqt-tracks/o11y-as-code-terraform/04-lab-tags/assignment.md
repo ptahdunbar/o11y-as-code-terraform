@@ -1,10 +1,6 @@
 ---
 slug: lab-tags
-<<<<<<< HEAD
 id: jadmmmxiarjr
-=======
-id: 60wvgsd37hzb
->>>>>>> 5d125f2ba706f84fa6d23db30aaeb8dcca3e017e
 type: challenge
 title: 'Lab: Tags'
 teaser: Tagging your applications

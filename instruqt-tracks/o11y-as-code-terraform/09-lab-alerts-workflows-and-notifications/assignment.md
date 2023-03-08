@@ -1,10 +1,6 @@
 ---
 slug: lab-alerts-workflows-and-notifications
-<<<<<<< HEAD
 id: uh4h9z1ekjxc
-=======
-id: rfmp7mzhlfji
->>>>>>> 5d125f2ba706f84fa6d23db30aaeb8dcca3e017e
 type: challenge
 title: 'Lab: Alerts, Workflows and Notifications'
 teaser: Setup alerts and notifications before issues become a larger issue.

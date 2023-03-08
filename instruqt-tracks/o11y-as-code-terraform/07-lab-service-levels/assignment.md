@@ -1,10 +1,6 @@
 ---
 slug: lab-service-levels
-<<<<<<< HEAD
 id: bhzejg2pww10
-=======
-id: a0ijbbfqljwx
->>>>>>> 5d125f2ba706f84fa6d23db30aaeb8dcca3e017e
 type: challenge
 title: 'Lab: Service Levels'
 teaser: Creating SLIs and SLOs for your applications

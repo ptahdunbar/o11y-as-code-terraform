@@ -1,10 +1,6 @@
 ---
 slug: lab-workloads
-<<<<<<< HEAD
 id: de2ewpgg5dch
-=======
-id: j8pd8l0eowqh
->>>>>>> 5d125f2ba706f84fa6d23db30aaeb8dcca3e017e
 type: challenge
 title: 'Lab: Workloads'
 teaser: Use Workloads to organize your resources

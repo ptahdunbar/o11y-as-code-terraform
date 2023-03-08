@@ -1,10 +1,6 @@
 ---
 slug: lab-refresh
-<<<<<<< HEAD
 id: oe2kcqay3m63
-=======
-id: rlkxbypobqap
->>>>>>> 5d125f2ba706f84fa6d23db30aaeb8dcca3e017e
 type: challenge
 title: 'Lab: Refresh'
 teaser: Reverting manual changes with terraform refresh
