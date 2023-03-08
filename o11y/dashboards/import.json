@@ -1,5 +1,5 @@
 {
-  "name": "O11yAC: Terraform x New Relic Workshop (TF)",
+  "name": "O11yAC: New Relic Workshop (TF)",
   "description": "This is an example dashboard",
   "permissions": "PUBLIC_READ_WRITE",
   "pages": [

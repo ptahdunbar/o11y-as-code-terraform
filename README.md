@@ -27,22 +27,13 @@ brew install hashicorp/tap/terraform
 #### Clone the repo and run the app
 ```
 git clone
-docker compose up
+make
+make up
 ```
 
 #### Configure your secrets
 ```
-cd o11y
-vim variables.tf
-```
-
-```
-export TF_VAR_NEW_RELIC_ACCOUNT_ID=1234567
-export TF_VAR_NEW_RELIC_API_KEY=AABBCC
-export TF_VAR_NEW_RELIC_REGION=US
-export TF_VAR_APPS='["web-api", "login-service"]'
-export TF_VAR_ALERT_NOTIFICATION_EMAIL=acme@example.com
-export TF_VAR_SYNTHETIC_MONITOR_URL=http://example.com
+make source
 ```
 
 ### Run Terraform

@@ -33,31 +33,43 @@ const webrequest = (app, fs) => {
     });
   });
 
-  app.get('/billing', (req, res) => {
+  app.get('/billing', async (req, res) => {
     console.log("hit billing route");
     logger.info('billing is executed');
     logger.info(`URL: ${SECONDHOP_URL}/confirmation`)
 
-    http.get(`${SECONDHOP_URL}/confirmation`, (resp) => {
-      let data = '';
+    await new Promise((resolve) => {
+        setTimeout(resolve, random(500, 3000))
+    })
 
-      // A chunk of data has been recieved.
-      resp.on('data', (chunk) => {
-        data += chunk;
+    // Deliberately return a server error.
+    if ( 1 == random(0, 1) ) {
+      http.get(`${SECONDHOP_URL}/confirmation`, (resp) => {
+        let data = '';
+  
+        // A chunk of data has been recieved.
+        resp.on('data', (chunk) => {
+          data += chunk;
+        });
+  
+        // The whole response has been received. Print out the result.
+        resp.on('end', () => {
+          console.log('end', data)
+          logger.info(data);
+          res.send(data);
+          newrelic.addCustomAttributes('userID','gqx293795');
+        });
+  
+      }).on("error", (err) => {
+        console.error(err);
+        logger.error(err);
       });
-
-      // The whole response has been received. Print out the result.
-      resp.on('end', () => {
-        console.log('end', data)
-        logger.info(data);
-        res.send(data);
-        newrelic.addCustomAttributes('userID','gqx293795');
-      });
-
-    }).on("error", (err) => {
-      console.error(err);
-      logger.error(err);
-    });
+    } else {
+        const error = new Error('Order confirmation failed. Please try again.')
+        logger.error(error);
+        newrelic.noticeError(error)
+        res.status(500).send(error);
+    }
   });
 };
 
