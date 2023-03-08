@@ -34,7 +34,7 @@ const appRouter = (app, fs) => {
         }
     });
 
-    app.get("/confirmation", async function healthCheck(req, res) {
+    app.get("/confirmation", async function confirmation(req, res) {
         logger.info("Confirming order...");
         await new Promise((resolve) => {
             setTimeout(resolve, random(1000, 3000))

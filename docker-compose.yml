@@ -1,6 +1,14 @@
 version: "3"
 
 services:
+  login:
+    build: apps/login-service
+    env_file: apps/login-service/.env
+    container_name: login-service-terraform
+    ports:
+      - "3002:3002"
+    networks:
+      - local_network
   api:
     build: apps/web-api
     env_file: apps/web-api/.env
@@ -9,14 +17,6 @@ services:
       - "3001:3001"
     depends_on:
       - login
-    networks:
-      - local_network
-  login:
-    build: apps/login-service
-    env_file: apps/login-service/.env
-    container_name: login-service-terraform
-    ports:
-      - "3002:3002"
     networks:
       - local_network
 networks:

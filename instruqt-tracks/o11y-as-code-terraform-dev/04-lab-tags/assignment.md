@@ -1,7 +1,8 @@
 ---
-slug: terraform-101
+slug: lab-tags
+id: 6gfzs7ofxfwg
 type: challenge
-title: terraform 101
+title: 'Lab: Tags'
 teaser: A short description of the challenge.
 notes:
 - type: text
@@ -10,7 +11,7 @@ tabs:
 - title: Terminal
   type: terminal
   hostname: docker-vm
-  workdir: /newrelic/o11y
+  workdir: /newrelic
 - title: Editor
   type: code
   hostname: docker-vm
@@ -18,39 +19,10 @@ tabs:
 difficulty: basic
 timelimit: 600
 ---
-🧪 Step 1: Configure your terraform environment variables
+🧪 Step 1: Setup applications
 =======================
-
-```
-o11y/.env
-```
-
-🧪 Step 2: Make source
+🧪 Step 2: Setup applications
 =======================
-
-```
-make source
-```
-
-🧪 Step 3: Terraform Validate
+🏁 Step 3: Finish
 =======================
-
-```
-terraform validate
-```
-
-🧪 Step 3: Terraform Plan
-=======================
-
-```
-terraform plan
-```
-
-🏁 Step 4: Terraform Apply
-=======================
-
-```
-terraform apply
-```
-
 To complete the challenge, press **Check**
