@@ -1,6 +1,6 @@
 ---
 slug: lab-dashboards
-id: mbg8p64yo1fk
+id: u7bfpsr0vh8d
 type: challenge
 title: 'Lab: Dashboards'
 teaser: Working with Dashboards

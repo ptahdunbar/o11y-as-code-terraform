@@ -1,6 +1,6 @@
 ---
 slug: lab-teardown
-id: poqifry95gkb
+id: up9yyp7txdtb
 type: challenge
 title: 'Lab: Teardown'
 teaser: Teardown all your resources.

@@ -1,6 +1,6 @@
 ---
 slug: lab-service-levels
-id: arhy7rgui2yr
+id: a0ijbbfqljwx
 type: challenge
 title: 'Lab: Service Levels'
 teaser: Creating SLIs and SLOs for your applications

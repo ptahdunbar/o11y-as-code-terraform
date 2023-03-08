@@ -1,6 +1,6 @@
 ---
 slug: lab-workloads
-id: pwtshy1nky6i
+id: j8pd8l0eowqh
 type: challenge
 title: 'Lab: Workloads'
 teaser: Use Workloads to organize your resources
