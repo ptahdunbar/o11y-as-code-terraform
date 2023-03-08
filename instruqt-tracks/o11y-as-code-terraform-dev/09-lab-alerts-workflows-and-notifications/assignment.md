@@ -3,19 +3,19 @@ slug: lab-alerts-workflows-and-notifications
 id: jfgskkq5jpun
 type: challenge
 title: 'Lab: Alerts, Workflows and Notifications'
-teaser: A short description of the challenge.
+teaser: Setup alerts and notifications before issues become a larger issue.
 notes:
 - type: text
   contents: Replace this text with your own text
 tabs:
-- title: Terminal
-  type: terminal
-  hostname: docker-vm
-  workdir: /newrelic
 - title: Editor
   type: code
   hostname: docker-vm
   path: /newrelic
+- title: Terminal
+  type: terminal
+  hostname: docker-vm
+  workdir: /newrelic
 difficulty: basic
 timelimit: 600
 ---

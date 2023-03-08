@@ -77,7 +77,7 @@ resource "newrelic_workload" "O11yAsCode" {
 
   # Include entities with a set of tags.
   entity_search_query {
-    query = "tags.Team='FutureStackSaoPaulo'"
+    query = var.MY_TEAM_WORKLOAD_QUERY
   }
 
   entity_guids = [
@@ -97,7 +97,7 @@ output "my-team-workload" {
 # https://registry.terraform.io/providers/newrelic/newrelic/latest/docs/resources/service_level
 #
 
-# TODO: Create a Serivce Level Indicator for the latency of the apps
+# TODO: Create a Serivce Level Indicator for the latency of your applications
 resource "newrelic_service_level" "latency" {
   count = length(var.APPS)
   guid = data.newrelic_entity.APPS[count.index].guid
@@ -127,7 +127,7 @@ resource "newrelic_service_level" "latency" {
   }
 }
 
-# TODO: Create a Serivce Level Indicator for the error rates of the apps
+# TODO: Create a Serivce Level Indicator for the error rates of your applications
 resource "newrelic_service_level" "error-rate" {
   count = length(var.APPS)
   guid = data.newrelic_entity.APPS[count.index].guid
