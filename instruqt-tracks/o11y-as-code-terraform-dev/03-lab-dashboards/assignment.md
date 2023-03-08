@@ -102,7 +102,7 @@ output "my-team-custom-dashboard" {
 - Using the Terminal tab, source your environment variables by navigating to the `o11y` directory and running the following command:
 
 ```
-. .env
+source .env
 ```
 
 - Using the Terminal tab, navigate to `o11y` directory and run the following command to preview your changes:

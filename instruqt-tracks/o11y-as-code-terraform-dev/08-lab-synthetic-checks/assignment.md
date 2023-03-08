@@ -92,7 +92,7 @@ resource "newrelic_synthetics_broken_links_monitor" "monitor" {
 - Using the Terminal tab, source your environment variables by navigating to the `o11y` directory and running the following command:
 
 ```
-. .env
+source .env
 ```
 
 - Preview the changes using the following command:

@@ -39,7 +39,7 @@ timelimit: 600
 - Switch to the Terminal tab, change to the `o11y` directory and run the following command:
 
 ```
-. .env
+source .env
 ```
 
 🧪 Step 2: terraform init

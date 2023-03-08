@@ -45,7 +45,7 @@ terraform refresh
 - (Optional) Using the Terminal tab, source your environment variables by navigating to the `o11y` directory and running the following command:
 
 ```
-. .env
+source .env
 ```
 
 - To fix any manual changes to your resources, run `terraform apply` and confirm the changes.

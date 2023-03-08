@@ -268,7 +268,7 @@ resource "newrelic_notification_channel" "alert_notification_email" {
 - Using the Terminal tab, source your environment variables by navigating to the `o11y` directory and running the following command:
 
 ```
-. .env
+source .env
 ```
 
 - Using the Terminal tab, preview the changes using the following command:
