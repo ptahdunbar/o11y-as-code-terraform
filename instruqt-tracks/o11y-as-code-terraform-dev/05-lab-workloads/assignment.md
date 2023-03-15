@@ -50,7 +50,7 @@ resource "newrelic_workload" "O11yAsCode" {
 
 - Remember to save the file.
 
-- Review `TF_VAR_MY_TEAM_WORKLOAD_QUERY` and `TF_VAR_TAGS` in `o11y/.env`
+- Review `TF_VAR_MY_TEAM_WORKLOAD_QUERY` and `TF_VAR_TAGS` in `o11y/terraform.tfvars`
 - Ensure that the `TF_VAR_TAGS` you create are reflected in `TF_VAR_MY_TEAM_WORKLOAD_QUERY`
 
 🧪 Step 2: Link to your workload
@@ -69,11 +69,7 @@ output "my-team-workload" {
 
 🏁 Step 3: Finish
 =======================
-- Using the Terminal tab, source your environment variables by navigating to the `o11y` directory and running the following command:
 
-```
-source .env
-```
 
 - Using the Terminal tab, preview the changes using the following command:
 

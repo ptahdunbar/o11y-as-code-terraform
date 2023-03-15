@@ -11,5 +11,9 @@ owner: newrelic
 developers:
 - pdunbar@newrelic.com
 maintenance: true
-checksum: "17274750364609328230"
 timelimit: 7800
+lab_config:
+  overlay: false
+  width: 25
+  position: right
+checksum: "2492228039861834807"

@@ -32,9 +32,9 @@ timelimit: 600
 
 ```
 resource "newrelic_synthetics_cert_check_monitor" "cert-check-monitor" {
-  count                  = length(var.SYNTHETIC_CHECK_SSL)
-  name                   = "cert-check-monitor-${var.SYNTHETIC_CHECK_SSL[count.index]}"
-  domain                 = "${var.SYNTHETIC_CHECK_SSL[count.index]}"
+  count                  = length(var.SYNTHETIC_CHECK_SSL_URLS)
+  name                   = "cert-check-monitor-${var.SYNTHETIC_CHECK_SSL_URLS[count.index]}"
+  domain                 = "${var.SYNTHETIC_CHECK_SSL_URLS[count.index]}"
   # Public minion location
   # https://docs.newrelic.com/docs/synthetics/synthetic-monitoring/administration/synthetic-public-minion-ips/#location
   locations_public       = ["AWS_SA_EAST_1", "AWS_US_EAST_1"]
@@ -54,7 +54,7 @@ resource "newrelic_synthetics_cert_check_monitor" "cert-check-monitor" {
 
 - Remember to save the file.
 
-- Review the `TF_VAR_SYNTHETIC_CHECK_SSL` variable in `o11y/.env`
+- Review the `TF_VAR_SYNTHETIC_CHECK_SSL` variable in `o11y/terraform.tfvars`
 
 🧪 Step 2: Check for broken links
 =======================
@@ -64,10 +64,10 @@ resource "newrelic_synthetics_cert_check_monitor" "cert-check-monitor" {
 
 ```
 resource "newrelic_synthetics_broken_links_monitor" "monitor" {
-  count                  = length(var.SYNTHETIC_CHECK_SSL)
-  name                   = "broken-links-monitor-${var.SYNTHETIC_CHECK_SSL[count.index]}"
+  count                  = length(var.SYNTHETIC_CHECK_SSL_URLS)
+  name                   = "broken-links-monitor-${var.SYNTHETIC_CHECK_SSL_URLS[count.index]}"
 
-  uri              = "${var.SYNTHETIC_CHECK_SSL[count.index]}"
+  uri              = "${var.SYNTHETIC_CHECK_SSL_URLS[count.index]}"
   # Public minion location
   # https://docs.newrelic.com/docs/synthetics/synthetic-monitoring/administration/synthetic-public-minion-ips/#location
   locations_public       = ["AWS_SA_EAST_1", "AWS_US_EAST_1"]
@@ -84,16 +84,12 @@ resource "newrelic_synthetics_broken_links_monitor" "monitor" {
 ```
 - Remember to save the file.
 
-- Review the `TF_VAR_SYNTHETIC_CHECK_SSL` variable in `o11y/.env`
+- Review the `TF_VAR_SYNTHETIC_CHECK_SSL` variable in `o11y/terraform.tfvars`
 
 🏁 Step 3: Finish
 =======================
 
-- Using the Terminal tab, source your environment variables by navigating to the `o11y` directory and running the following command:
 
-```
-source .env
-```
 
 - Preview the changes using the following command:
 

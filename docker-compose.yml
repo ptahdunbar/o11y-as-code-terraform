@@ -7,8 +7,8 @@ services:
     container_name: login-service-terraform
     ports:
       - "3002:3002"
-    networks:
-      - local_network
+    depends_on:
+      - cloud-infra
   api:
     build: apps/web-api
     env_file: apps/web-api/.env
@@ -17,8 +17,17 @@ services:
       - "3001:3001"
     depends_on:
       - login
-    networks:
-      - local_network
-networks:
-  local_network:
-    driver: bridge
+      - infra
+  cloud-infra:
+    env_file: apps/cloud-infra/.env
+    build:
+      context: apps/cloud-infra
+    cap_add:
+      - SYS_PTRACE
+    network_mode: host
+    pid: host
+    privileged: true
+    volumes:
+      - ./apps:/apps
+      - "/var/run/docker.sock:/var/run/docker.sock"
+    restart: unless-stopped

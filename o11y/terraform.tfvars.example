@@ -1,0 +1,33 @@
+# change me
+NEW_RELIC_ACCOUNT_ID=1234567
+NEW_RELIC_API_KEY="NRAK-AABBCC"
+ALERT_NOTIFICATION_EMAIL="acme@example.com"
+
+# optionally change me
+MY_TEAM_WORKLOAD_NAME="O11yAsCode DoD SLC (TF)"
+
+SYNTHETIC_CHECK_SSL_URLS=[
+    "https://example.com",
+    "https://amce.com"
+]
+
+SYNTHETIC_CHECK_BROKEN_LINKS=[
+    "https://example.com",
+    "https://amce.com"
+]
+
+# change me together
+TAGS={
+    "team" = "DoDSLC",
+    "env" = "staging",
+}
+MY_TEAM_WORKLOAD_QUERY="tags.Team='DoDSLC'"
+
+# keep me please
+APPS=[
+    "web-api",
+    "login-service",
+]
+
+# change to US or EU
+NEW_RELIC_REGION="US"

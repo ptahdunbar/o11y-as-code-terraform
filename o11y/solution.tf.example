@@ -164,9 +164,9 @@ resource "newrelic_service_level" "error-rate" {
 
 # TODO: Create a Synthetics monitor to check for valid SSL certificates
 resource "newrelic_synthetics_cert_check_monitor" "cert-check-monitor" {
-  count                  = length(var.SYNTHETIC_CHECK_SSL)
-  name                   = "cert-check-monitor-${var.SYNTHETIC_CHECK_SSL[count.index]}"
-  domain                 = "${var.SYNTHETIC_CHECK_SSL[count.index]}"
+  count                  = length(var.SYNTHETIC_CHECK_SSL_URLS)
+  name                   = "cert-check-monitor-${var.SYNTHETIC_CHECK_SSL_URLS[count.index]}"
+  domain                 = "${var.SYNTHETIC_CHECK_SSL_URLS[count.index]}"
   # Public minion location
   # https://docs.newrelic.com/docs/synthetics/synthetic-monitoring/administration/synthetic-public-minion-ips/#location
   locations_public       = ["AWS_SA_EAST_1", "AWS_US_EAST_1"]
@@ -190,10 +190,10 @@ resource "newrelic_synthetics_cert_check_monitor" "cert-check-monitor" {
 
 # TODO: Create a Synthetics monitor to check for broken links
 resource "newrelic_synthetics_broken_links_monitor" "monitor" {
-  count                  = length(var.SYNTHETIC_CHECK_SSL)
-  name                   = "broken-links-monitor-${var.SYNTHETIC_CHECK_SSL[count.index]}"
+  count                  = length(var.SYNTHETIC_CHECK_SSL_URLS)
+  name                   = "broken-links-monitor-${var.SYNTHETIC_CHECK_SSL_URLS[count.index]}"
 
-  uri              = "${var.SYNTHETIC_CHECK_SSL[count.index]}"
+  uri              = "${var.SYNTHETIC_CHECK_SSL_URLS[count.index]}"
   # Public minion location
   # https://docs.newrelic.com/docs/synthetics/synthetic-monitoring/administration/synthetic-public-minion-ips/#location
   locations_public       = ["AWS_SA_EAST_1", "AWS_US_EAST_1"]

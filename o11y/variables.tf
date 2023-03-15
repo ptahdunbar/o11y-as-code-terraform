@@ -41,13 +41,13 @@ variable "MY_TEAM_WORKLOAD_QUERY" {
 }
 
 # List of URLs to run checks against.
-variable "SYNTHETIC_CHECK_SSL" {
+variable "SYNTHETIC_CHECK_SSL_URLS" {
   description = "URLS to check for synthetic checks"
   type        = list(string)
   default = ["https://example.com", "https://amce.com"]
 }
 
-variable "SYNTHETIC_CHECK_LINKS" {
+variable "SYNTHETIC_CHECK_BROKEN_LINKS" {
   description = "URLS to check for synthetic checks"
   type        = list(string)
   default = ["https://example.com", "https://amce.com"]

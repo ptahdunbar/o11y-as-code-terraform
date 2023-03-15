@@ -67,7 +67,7 @@ terraform apply
 =======================
 
 - Using the metadata retrieved in the previous step, we now have access to the guid which `newrelic_entity_tags` needs.
-- Review the `TF_VAR_TAGS` environment variable in `o11y/.env`
+- Review the `TF_VAR_TAGS` environment variable in `o11y/terraform.tfvars`
 - Use environment variables to tag your applications dynamically
 - In `o11y/main.tf` add this code snippet after `# TODO: Tag each app with the team and environment values`
 
@@ -90,12 +90,6 @@ resource "newrelic_entity_tags" "APPS" {
 
 🏁 Step 3: Finish
 =======================
-
-- Using the Terminal tab, source your environment variables by navigating to the `o11y` directory and running the following command:
-
-```
-source .env
-```
 
 - Using the Terminal tab, preview the changes using the following command:
 

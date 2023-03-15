@@ -10,7 +10,7 @@ notes:
     # Terraform Workflow
 
     In this challenge, you're tasked with
-    - Adding your New Relic credentials to `o11y/.env`
+    - Adding your New Relic credentials to `o11y/terraform.tfvars`
     - initializing terraform using `terraform init`
     - Validating your terraform config using `terraform validate`
     - Previewing your changes using `terraform plan`
@@ -27,20 +27,14 @@ tabs:
 difficulty: basic
 timelimit: 600
 ---
-🧪 Step 1: Preparing your terraform `o11y/.env` file
+🧪 Step 1: Preparing your terraform `o11y/terraform.tfvars` file
 =======================
 
-- Using the Editor tab, navigate to `o11y/.env` and drop in your `NEW_RELIC_ACCOUNT_ID` and `NEW_RELIC_API_KEY` which is different from your `NEW_RELIC_LICENSE_KEY`.
+- Using the Editor tab, navigate to `o11y/terraform.tfvars` and drop in your `NEW_RELIC_ACCOUNT_ID` and `NEW_RELIC_API_KEY` which is different from your `NEW_RELIC_LICENSE_KEY`.
 
 - Your `NEW_RELIC_API_KEY` should start with `NRAK-`
 
 - Update `ALERT_NOTIFICATION_EMAIL` to point to your email address.
-
-- Switch to the Terminal tab, change to the `o11y` directory and run the following command:
-
-```
-source .env
-```
 
 🧪 Step 2: terraform init
 =======================
