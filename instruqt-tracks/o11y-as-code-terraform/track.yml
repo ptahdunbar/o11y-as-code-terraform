@@ -10,5 +10,10 @@ tags:
 owner: newrelic
 developers:
 - pdunbar@newrelic.com
-checksum: "17167584449997857416"
+show_timer: true
 timelimit: 7800
+lab_config:
+  overlay: false
+  width: 25
+  position: right
+checksum: "1805999203014242908"
