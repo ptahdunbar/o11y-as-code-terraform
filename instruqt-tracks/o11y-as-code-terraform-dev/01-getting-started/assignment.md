@@ -43,13 +43,18 @@ make
 
 - Using the Editor tab, update the `apps/*/.env` files to add your `NEW_RELIC_LICENSE_KEY` to each application.
 
+```
 - apps/web-api/.env
 - apps/login-service/.env
+- apps/cloud-infra/.env
+```
 
 .env file:
 ```
 NEW_RELIC_LICENSE_KEY=AABBCC
 ```
+
+Note: `NRIA_LICENSE_KEY` takes the same value as `NEW_RELIC_LICENSE_KEY`
 
 🏁 Step 3: Finish
 =========

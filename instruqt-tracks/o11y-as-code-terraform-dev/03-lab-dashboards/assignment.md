@@ -18,11 +18,11 @@ tabs:
 - title: Editor
   type: code
   hostname: docker-vm
-  path: /newrelic
+  path: /newrelic/o11y
 - title: Terminal
   type: terminal
   hostname: docker-vm
-  workdir: /newrelic
+  workdir: /newrelic/o11y
 difficulty: basic
 timelimit: 600
 ---

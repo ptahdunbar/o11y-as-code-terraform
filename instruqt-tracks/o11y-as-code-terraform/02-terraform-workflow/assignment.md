@@ -30,9 +30,10 @@ timelimit: 600
 🧪 Step 1: Preparing your terraform `o11y/terraform.tfvars` file
 =======================
 
-- Using the Editor tab, navigate to `o11y/terraform.tfvars` and drop in your `NEW_RELIC_ACCOUNT_ID` and `NEW_RELIC_API_KEY` which is different from your `NEW_RELIC_LICENSE_KEY`.
+- Using the Editor tab, navigate to `o11y/terraform.tfvars` and drop in your secrets.
 
-- Your `NEW_RELIC_API_KEY` should start with `NRAK-`
+- Note: `NEW_RELIC_API_KEY` is different from `NEW_RELIC_LICENSE_KEY`
+- Note: `NEW_RELIC_API_KEY` should start with `NRAK-`
 
 - Update `ALERT_NOTIFICATION_EMAIL` to point to your email address.
 
