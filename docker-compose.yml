@@ -17,7 +17,7 @@ services:
       - "3001:3001"
     depends_on:
       - login
-      - infra
+      - cloud-infra
   cloud-infra:
     env_file: apps/cloud-infra/.env
     build:
