@@ -153,3 +153,28 @@ variable "ALERT_SATURATION" {
     warning_threshold_occurrences   = "at_least_once"
   }
 }
+
+# Address / URL for Vault server
+variable "VAULT_ADDR" {
+  type = string
+}
+
+# Namespace for Vault secrets
+variable "VAULT_NAMESPACE" {
+  type = string
+}
+
+# New Relic Key (path to secret in our namespace)
+variable "VAULT_NEW_RELIC_KEY_PATH" {
+  type = string
+}
+
+# New Relic Account ID (path to secret in our namespace)
+variable "VAULT_NEW_RELIC_ACCOUNT_ID_PATH" {
+  type = string
+}
+
+# New Relic API key (path to secret in our namespace)
+variable "VAULT_NEW_RELIC_API_KEY_PATH" {
+  type = string
+}
