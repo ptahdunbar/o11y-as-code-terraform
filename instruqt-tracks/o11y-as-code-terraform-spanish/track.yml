@@ -1,0 +1,17 @@
+slug: o11y-as-code-terraform-spanish
+title: O11y As Code Terraform Spanish
+teaser: This app demonstrates how to incorporate Terraform and New Relic together
+  using Observability as Code.
+description: O11y as Code Terraform Edition
+icon: https://storage.googleapis.com/instruqt-frontend/img/tracks/default.png
+tags: []
+owner: newrelic
+developers:
+- pdunbar@newrelic.com
+- fisabel@newrelic.com
+show_timer: true
+timelimit: 7800
+lab_config:
+  overlay: false
+  width: 25
+  position: right
